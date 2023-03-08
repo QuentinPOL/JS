@@ -89,11 +89,23 @@ while (textReplace === "")
 modifDiv(textReplace, "DIV1");
 */
 
-// Exo 9
-function modifNameDiv(textName,  nameDiv) {
+/*
+// Exo 9.1
+function NameDiv(textName,  nameDiv) {
     alert("are u ready brooo ?");
     
     var element = document.getElementsByName(nameDiv);
+
+    element.forEach(div => {
+        div.innerHTML = textName;
+    });
+}
+
+// Exo 9.2
+function TagsNameDiv(textName,  nameDiv) {
+    alert("are u ready brooo ?");
+    
+    var element = document.getElementsByTagName(nameDiv);
 
     for (var i = 0; i < element.length; i++)
     {
@@ -101,14 +113,56 @@ function modifNameDiv(textName,  nameDiv) {
     }
 }
 
-var textReplaceName = prompt("Entrez du texte");
+// Exo 9.3
+function ClassNameDiv(textName,  nameDiv) {
+    alert("are u ready brooo ?");
+    
+    var element = document.getElementsByClassName(nameDiv);
 
+    for (var i = 0; i < element.length; i++)
+    {
+        element[i].innerHTML = textName;
+    }
+}
+
+// Exo 9.X (commun)
+var textReplaceName = prompt("Entrez du texte");
 while (textReplaceName === "") 
 {
     alert("T'a rien saisi !");
     textReplaceName = prompt("Entre du texte SALE NOOB BUUUU");
 }
 
-modifNameDiv(textReplaceName, "divName"); 
+// Exo 9.1
+NameDiv(textReplaceName, "test"); 
+// Exo 9.2
+TagsNameDiv(textReplaceName, "div"); 
+// Exo 9.3
+ClassNameDiv(textReplaceName, "divName2"); 
+*/
+
 
 // Exo 10
+var divX = document.getElementById("Methode1");
+divX.addEventListener("click", FunctionChangeText);
+
+function FunctionChangeText(evenement)
+{
+    if (evenement.target.className == "divName2") 
+    {
+        evenement.target.className = "newStyle";
+    }
+}
+
+var div2 = document.getElementById("Methode2");
+div2.addEventListener("mouseover", FunctionMouseOver);
+
+function FunctionMouseOver(evenement) 
+{
+    evenement.target.style.visibility = "hidden";
+}
+
+function divClick() 
+{
+    alert("OOHOH ALERTE AU GOGOLES !");
+}
