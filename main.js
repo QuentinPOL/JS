@@ -69,6 +69,7 @@ var num2 = parseInt(chiffre2);
 alert("Resultat : " + addition(num1, num2));
 */
 
+/*
 // Exo 8
 function modifDiv(text,  idDiv) {
     alert("are u ready ?");
@@ -79,11 +80,35 @@ function modifDiv(text,  idDiv) {
 
 var textReplace = prompt("Entrez du texte");
 
-if (textReplace != "")
-{
-    modifDiv(textReplace, "DIV1");
-}
-else
+while (textReplace === "") 
 {
     alert("T'a rien saisi !");
+    textReplace = prompt("Entre du texte SALE NOOB");
 }
+
+modifDiv(textReplace, "DIV1");
+*/
+
+// Exo 9
+function modifNameDiv(textName,  nameDiv) {
+    alert("are u ready brooo ?");
+    
+    var element = document.getElementsByName(nameDiv);
+
+    for (var i = 0; i < element.length; i++)
+    {
+        element[i].innerHTML = textName;
+    }
+}
+
+var textReplaceName = prompt("Entrez du texte");
+
+while (textReplaceName === "") 
+{
+    alert("T'a rien saisi !");
+    textReplaceName = prompt("Entre du texte SALE NOOB BUUUU");
+}
+
+modifNameDiv(textReplaceName, "divName"); 
+
+// Exo 10

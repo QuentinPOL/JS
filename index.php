@@ -9,9 +9,21 @@
     </head>
 
     <body>
+        <!-- EXO 8
         <div id="DIV1">
             Coucou MEC !!!!
         </div>
+        -->
+
+        <!-- EXO 9 -->
+        <?php 
+            for ($i = 0; $i < 10; $i++)
+            {
+                ?>
+                    <div name="divName"></div>
+                <?php
+            }
+        ?>
     </body>
 
     <script src='main.js'></script>
