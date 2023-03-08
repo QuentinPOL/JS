@@ -68,3 +68,22 @@ var num2 = parseInt(chiffre2);
 
 alert("Resultat : " + addition(num1, num2));
 */
+
+// Exo 8
+function modifDiv(text,  idDiv) {
+    alert("are u ready ?");
+    
+    var element = document.getElementById(idDiv);
+    element.textContent = text;
+}
+
+var textReplace = prompt("Entrez du texte");
+
+if (textReplace != "")
+{
+    modifDiv(textReplace, "DIV1");
+}
+else
+{
+    alert("T'a rien saisi !");
+}
