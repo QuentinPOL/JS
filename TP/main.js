@@ -181,40 +181,34 @@ function jourDeLaSemaine(event)
 
 // Exo 8
 var divExo8 = document.getElementById('divExo8');
-var monParametre = 5;
+var monParametre;
 
 divExo8.addEventListener("mouseover", function(event) {
-    // Ajoutez vos paramètres supplémentaires à l'objet event
-    event.target.monParametre = 5;
-    // Appelez votre fonction de rappel ici
-    changementCouleur(event.target.monParametre);
+  monParametre = 1; 
+changementCouleur(event, monParametre);
 });
 
 divExo8.addEventListener("click", function(event) {
-    // Ajoutez vos paramètres supplémentaires à l'objet event
-    event.target.monParametre = 2;
-    // Appelez votre fonction de rappel ici
-    changementCouleur(event.target.monParametre);
+    monParametre = 2; 
+changementCouleur(event, monParametre);
 });
 
 divExo8.addEventListener("dblclick", function(event) {
-    // Ajoutez vos paramètres supplémentaires à l'objet event
-    event.target.monParametre = 3;
-    // Appelez votre fonction de rappel ici
-    changementCouleur(event.target.monParametre);
+    monParametre = 3; 
+changementCouleur(event, monParametre);
 });
 
-function changementCouleur(event)
+function changementCouleur(event, method)
 {
-    if (event == 5)
+    if (method == 1)
     {
         event.target.style.color = "red";
     }
-    else if (event == 2)
+    else if (method == 2)
     {
         event.target.style.color = "lime";
     }
-    else if (event == 3)
+    else if (method == 3)
     {
         event.target.style.color = "navy";
     }
